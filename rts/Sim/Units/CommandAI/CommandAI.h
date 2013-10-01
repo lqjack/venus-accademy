@@ -117,6 +117,11 @@ public:
 	int lastSelectedCommandPage;
 	bool unimportantMove;
 
+	//EDOARDO : qui dobbiamo salvare il prossimo firestate e anche il resto che verrà
+	//va creato inoltre un comand lua --> scoprire come cazzo vengono inviati i commands via lua
+	bool nextFirestate;
+
+
 protected:
 	virtual void SelectNewAreaAttackTargetOrPos(const Command& ac) {}
 

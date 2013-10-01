@@ -612,7 +612,7 @@ void LuaUtils::ParseCommandOptions(lua_State* L, const char* caller,
 		luaL_error(L, "%s(): bad options", caller);
 	}
 }
-
+//EDOARDO : qua bisogna parsare il command in modo che abbia anche il firestate
 
 Command LuaUtils::ParseCommand(lua_State* L, const char* caller, int idIndex)
 {

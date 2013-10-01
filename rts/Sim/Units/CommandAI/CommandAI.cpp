@@ -759,7 +759,12 @@ void CCommandAI::GiveAllowedCommand(const Command& c, bool fromSynced)
 	}
 
 	// flush the queue for immediate commands
+	//EDOARDO QUA CANCELLA LA CODA SE NON E' premuto SHIFT
 	// NOTE: CMD_STOP can be a queued order (!)
+	/*
+	//we whant all commands to be queued so this one will be commented out
+	//EDOARDO
+	/*
 	if (!(c.options & SHIFT_KEY)) {
 		waitCommandsAI.ClearUnitQueue(owner, commandQue);
 		ClearTargetLock((commandQue.empty())? Command(CMD_STOP): commandQue.front());
@@ -773,7 +778,7 @@ void CCommandAI::GiveAllowedCommand(const Command& c, bool fromSynced)
 		assert(commandQue.empty());
 
 		inCommand = false;
-	}
+	}*/
 
 	AddCommandDependency(c);
 
